@@ -1,11 +1,16 @@
+
+
 export default class PreloadScene extends Phaser.Scene {
   constructor() {
     super({ key: 'PreloadScene' })
+    
   }
 
   preload() {
     this.load.image('background', 'assets/img/tempBg.jpg')
     this.load.image('navButton', 'assets/img/navButtonCG.png')
+
+    
 
   }
 

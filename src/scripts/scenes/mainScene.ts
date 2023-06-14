@@ -3,8 +3,9 @@ import {Button} from '../objects/button';
 import {Label} from '../objects/label';
 
 
-export default class MainScene extends Phaser.Scene {
 
+
+export default class MainScene extends Phaser.Scene {
   constructor() {
     super({ key: 'MainScene' })
   }
@@ -18,6 +19,10 @@ export default class MainScene extends Phaser.Scene {
     image.setScale(this.cameras.main.width / image.width, this.cameras.main.height / image.height);
     const title = new Label(this,100,100,"Escape From Mars!");
     const startButton = new Button(this,200,200,'Begin',"instructions");
+
+   
+
+
 
 
 
