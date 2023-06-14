@@ -4,7 +4,9 @@ export default class PreloadScene extends Phaser.Scene {
   }
 
   preload() {
-    
+    this.load.image('background', 'assets/img/tempBg.jpg')
+    this.load.image('navButton', 'assets/img/navButtonCG.png')
+
   }
 
   create() {

@@ -2,118 +2,61 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Mars Escape</title>
-    
-    <!-- css, would be better in a seperate file but it did not want to connect. -->
-    <style> 
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <meta name="theme-color" content="#000000" />
+
+    <link rel="manifest" href="./manifest.json" />
+
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="application-name" content="<%= htmlWebpackPlugin.options.gameName %>" />
+    <meta name="apple-mobile-web-app-title" content="<%= htmlWebpackPlugin.options.gameName %>" />
+    <meta name="msapplication-starturl" content="./" />
+
+    <link rel="icon" type="image/png" sizes="192x192" href="./icons/icons-192.png" />
+    <link rel="apple-touch-icon" type="image/png" sizes="192x192" href="./icons/icons-192.png" />
+
+    <link rel="icon" type="image/png" sizes="512x512" href="./icons/icons-512.png" />
+    <link rel="apple-touch-icon" type="image/png" sizes="512x512" href="./icons/icons-512.png" />
+
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+
+    <title><%= htmlWebpackPlugin.options.gameName %></title>
+    <style>
+      html,
       body {
-        font-family: monospace;
-        background-color: pink;
-        background-image: url(assets/img/tempBg.jpg);
+        height: 100%;
+        margin: 0;
+        background-color: #000000;
       }
-      h1 {
-          font-size: 6em;
-          color:orangered;
-          background-color: orange;
-          padding-left: 2em;
-          padding-right: 2em;
-          padding-top: 1em;
-          padding-bottom: 1em;
-          border-radius: .5em;
-      }
-      h2 {
-          font-size: 1.6em;
-          color:orangered;
-          background-color: orange;
-          padding-left: 4em;
-          padding-right: 4em;
-          padding-top: .5em;
-          padding-bottom: .5em;
-          border-radius: .5em;
-      }
-      #languageButton {
-          font-family: monospace;
-          border: none;
-          border-radius: .5em;
-          color:orangered;
-          background-color: rgb(255, 222, 140);
-          font-size: 2.5em;
-          margin-top: .5em;
-          padding-left: 1.5em;
-          padding-right: 1.5em;
-          padding-top: .5em;
-          padding-bottom: .5em;
-      }
-      #languageButton:hover {
-          background-color: orange;
-      }
-      #startButton {
-          font-family: monospace;
-          border: none;
-          border-radius: .5em;
-          color: aliceblue;
-          background-color: orange;
-          padding-left: 1.5em;
-          padding-right: 1.5em;
-          padding-top: .5em;
-          padding-bottom: .5em;
-          font-size: 4em;
-          margin-top: .5em;
-      }
-      #startButton:hover {
-          font-size: 4.2em;
-          color: orange;
-          background-color: red;
-      }
-      #flexcontainer {
-          text-align: center;
-          display: flex;
-          flex-direction: row;
-          flex-wrap: wrap;
-          margin-left: 1em;
-          margin-right: 1em;
-      }
-      #left {
-          margin-right: auto;
-          margin-left: 2em;
-          text-align: center;
-      }
-      #right {
-          margin-right: 2em;
-          text-align: center;
-      }
-    </style>  
+    </style>
 
     <noscript>Please enable javascript to continue using this application.</noscript>
 
+    <!-- installs the serviceWorker -->
+    <!-- <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('./sw.js')
+        })
+      }
+    </script> -->
+
+    <title>Phaser Input Field</title>
+  <style>
+    body { margin: 0; }
+  </style>
+</head>
+<body>
+  <div id="game-container"></div>
+  <script src="phaser.min.js"></script>
   </head>
   <body>
-    <div id="phaser-game">
-
-      <div id="flexcontainer">
-        <!-- holds all content on left side of screen-->
-        <div id="left">
-            <h1>Escape From Mars!</h1>
-            <h2>Kian Petroskie, Kaviya Krishnan Suji, Kenia Ventura Calderon, Val Lieou</h2>
-            
-            <!-- language buttons -->
-            <div id="flexcontainer">
-                <div id="left">
-                    <button id="languageButton">English</button>
-                </div>
-                <div id="right">
-                    <button id="languageButton">Francais</button>
-                </div>
-            </div>
-            <!-- start button -->
-            <button id="startButton">Begin</button>
-        </div>
-        <!-- holds all content on right side of screen-->
-        <div id="right">
-            right. will contain artwork
-        </div>
-      </div>
-      <!--end of game container-->
-    </div>
+    <div id="phaser-game"></div>
   </body>
 </html>
