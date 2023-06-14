@@ -13,12 +13,15 @@ import PuzzleFour from './scenes/puzzleFour'
 
 
 
+
+
 const DEFAULT_WIDTH = 1280
 const DEFAULT_HEIGHT = 720
 
 const config = {
   type: Phaser.AUTO,
   backgroundColor: '#ffffff',
+  
   scale: {
     parent: 'phaser-game',
     mode: Phaser.Scale.FIT,
@@ -26,7 +29,11 @@ const config = {
     width: DEFAULT_WIDTH,
     height: DEFAULT_HEIGHT
   },
-  scene: [PreloadScene, MainScene,Instructions,Story,PuzzleOne,PuzzleTwo,PuzzleThree,PuzzleFour,],
+  dom: {
+    createContainer: true
+},
+  scene: [PreloadScene, MainScene,Instructions,Story,PuzzleOne,PuzzleTwo,PuzzleThree,PuzzleFour],
+  userName: "guest",
   physics: {
     default: 'arcade',
     arcade: {
@@ -34,8 +41,22 @@ const config = {
       gravity: { y: 400 }
     }
   }
+  
 }
 
 window.addEventListener('load', () => {
+  window.userName = "guest";
+
   const game = new Phaser.Game(config)
+
 })
+declare global {
+  interface Window {
+    userName: string ;
+  }
+}
+
+
+
+
+

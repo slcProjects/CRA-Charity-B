@@ -13,7 +13,7 @@ export default class Story extends Phaser.Scene {
     create()
     {
        
-
+        console.log("inside story =>" + window.userName);
         const content = [
             'Add Story here.',
             'change to whatever you like'
@@ -21,7 +21,9 @@ export default class Story extends Phaser.Scene {
        
 
         const title = new Label(this,100,100,"Story");
-        var text = this.add.text(this.cameras.main.centerX, this.cameras.main.centerY, content, textStyle);
+        const UserName = new Label(this,10,150,window.userName);
+
+        var text = this.add.text(this.cameras.main.centerX, this.cameras.main.centerY,this.data.get('userName'), textStyle);
         text.setOrigin(0.5);
         const nextButton = new Button(this,200,200,'Start',"PuzzleOne");
   
