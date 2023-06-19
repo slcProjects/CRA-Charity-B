@@ -30,8 +30,8 @@ export class Button extends Phaser.GameObjects.Container {
 
         const button = scene.add.text(x, y, text)
         .setOrigin(0.5)
-        .setPadding(10)
-        .setStyle({ backgroundColor: '#111' })
+        .setPadding(x=35,y=25)
+        .setStyle({ backgroundColor: 'orange', border: 'none', fontFamily: 'monospace', fontSize: '45px'})
         .setInteractive();
 
         /* can also use images for buttons
@@ -46,6 +46,12 @@ export class Button extends Phaser.GameObjects.Container {
         button.on('pointerdown', () => {
             button.setStyle({ fill: '#f39c12' });
         });
+        button.on('pointerover', () => {
+          button.setStyle({ backgroundColor: 'red', fill: 'orange' });
+        });
+        button.on('pointerout', () => {
+          button.setStyle({ backgroundColor: 'orange', fill: 'white' });
+        });
         button.on('pointerup', () => {
             button.setStyle({ fill: '#FFF' });
           if (this.targetScene) {
@@ -58,6 +64,7 @@ export class Button extends Phaser.GameObjects.Container {
         this.scene.add.existing(this);
       }
 }
+
 /*
 export class Button extends Phaser.GameObjects.Container {
     on: any;
