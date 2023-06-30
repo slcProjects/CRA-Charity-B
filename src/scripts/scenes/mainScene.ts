@@ -12,7 +12,7 @@ export default class MainScene extends Phaser.Scene {
 
   create() {
 
-    const image = this.add.image(0, 0, 'background');
+    const image = this.add.image(0, 0, 'background');//bg
        
     image.setOrigin(0.5);
     image.setPosition(this.cameras.main.centerX, this.cameras.main.centerY);

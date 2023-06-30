@@ -46,6 +46,9 @@ const config = {
 
 window.addEventListener('load', () => {
   window.userName = "guest";
+  window.puzzOneVarOne = 0;
+  window.puzzOneVarTwo = 0;
+  window.puzzOneVarThree = 0;
 
   const game = new Phaser.Game(config)
 
@@ -53,6 +56,9 @@ window.addEventListener('load', () => {
 declare global {
   interface Window {
     userName: string ;
+    puzzOneVarOne: integer;
+    puzzOneVarTwo: integer;
+    puzzOneVarThree: integer;
   }
 }
 
