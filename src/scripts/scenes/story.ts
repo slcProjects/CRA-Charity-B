@@ -12,8 +12,10 @@ export default class Story extends Phaser.Scene {
     
     create()
     {
+
        
         console.log("inside story =>" + window.userName);
+        const image = this.add.image(0, 0, 'background');
         const content = [
             '  Escape From Mars!',
             ' You are on an exploratory mission on Mars and you met some Martians!'+
