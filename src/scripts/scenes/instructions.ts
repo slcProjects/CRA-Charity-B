@@ -12,24 +12,39 @@ export default class Instructions extends Phaser.Scene {
     }
 
   
+    
 
     create()
     {
+        const image = this.add.image(0, 0, 'background');
+        image.setOrigin(0.5);
+        image.setPosition(this.cameras.main.centerX, this.cameras.main.centerY);
+        image.setScale(this.cameras.main.width / image.width, this.cameras.main.height / image.height);
+
         const content = [
-            'Add instructions here.',
-            'change to whatever you like'
+                    'You have to follow the presentation. You will have access to other',
+                    'documents that are password protected. You must solve the puzzles to find',
+                    'the passwords. Once you think you have a password you can try it out on the',
+                    'protected documents. The game can be completed in about 30 minutes.',
+                    'These are a few objects to help you on your quest.',
+                    'You start your research…. You will find some puzzles with locks. When',
+                    'you decode a combination of numbers, you can try that number on one of',
+                    'the password protected puzzles. Good luck!'
         ];
        
+        this.add.image(400,400, 'map.png');
+
+        this.add.image(500,400, 'Alphabet.png');
 
         const title = new Label(this,/*this.cameras.main.centerX*/ 250,50,"Instructions");
         var text = this.add.text(250, 150/*this.cameras.main.centerY*/, content, textStyle);
-        text.setOrigin(0.5);
+        text.setOrigin(.103);
 
-        this.add.text(250, 250 , "please enter your name", textStyle);
+        this.add.text(150, 650 , "please enter your name", textStyle);
 
-        var inputText = new Input(this, 600, 250, 150, 50);
+        var inputText = new Input(this, 500, 670, 150, 50);
         this.add.existing(inputText);
-        const nextButton = new Button(this,250,250,'Start',"Story");
+        const nextButton = new Button(this,450,335,'Start',"Story");
 
         inputText.on('textchange', function(inputText, e){ window.userName = inputText.text;
         }, this);
