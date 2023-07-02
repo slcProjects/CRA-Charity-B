@@ -15,8 +15,13 @@ export default class Story extends Phaser.Scene {
        
         console.log("inside story =>" + window.userName);
         const content = [
-            'Add Story here.',
-            'change to whatever you like'
+            '  Escape From Mars!',
+            ' You are on an exploratory mission on Mars and you met some Martians!'+
+            'They need your help recovering a magical precious stone. It is'+
+            'essential to their culture and you need to find the stone as soon'+
+            'as you can! Without the magical powers in the stone, the Martians wont'+ 
+            'be able to maintain peace and the different clans might go to war.'+
+            'You must help the Martians find the stone!'
         ];
        
 
