@@ -59,6 +59,7 @@ declare global {
     puzzOneVarOne: integer;
     puzzOneVarTwo: integer;
     puzzOneVarThree: integer;
+    hintButton: ConstantSourceNode;
   }
 }
 

@@ -6,6 +6,10 @@ import {Input} from '../objects/inputText';
 
 
 export default class Instructions extends Phaser.Scene {
+
+  private map;
+  private alpha;
+
     constructor() {
       super({ key: 'instructions' })
      
@@ -32,9 +36,11 @@ export default class Instructions extends Phaser.Scene {
                     'the password protected puzzles. Good luck!'
         ];
        
-        this.add.image(400,400, 'map.png');
+        this.map = this.add.image(350,490, 'Map');
+        this.map.setScale(0.8,0.6);
 
-        this.add.image(500,400, 'Alphabet.png');
+        this.alpha = this.add.image(950,490, 'alphaChart');
+        this.alpha.setScale(0.5,0.5);
 
         const title = new Label(this,/*this.cameras.main.centerX*/ 250,50,"Instructions");
         var text = this.add.text(250, 150/*this.cameras.main.centerY*/, content, textStyle);

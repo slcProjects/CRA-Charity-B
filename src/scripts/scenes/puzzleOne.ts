@@ -19,9 +19,11 @@ export default class PuzzleOne extends Phaser.Scene {
         image.setPosition(this.cameras.main.centerX, this.cameras.main.centerY);
         image.setScale(this.cameras.main.width / image.width, this.cameras.main.height / image.height);
        
-        const title = new Label(this,100,30,"Puzzle One : Labyrinth");
+        const title = new Label(this,70,30,"Puzzle One : Labyrinth");
         const nextButton = new Button(this,550,330,'Next Puzzle',"PuzzleTwo");
-        const hintButton = new Button(this,500,30,'hint',"");
+        const hintButton = new Button(this,525,30,'hint',"");
+        //addTooltipToButton(hintButton, 'This is a hint');
+        
   
 
         const content = [
@@ -29,9 +31,10 @@ export default class PuzzleOne extends Phaser.Scene {
           'While you make your way to the exit you must count the colored stones.',
         ];
 
-        this.add.image(500,400, 'puzzOneImg');
+        const picOne = this.add.image(500,350, 'puzzOneImg');
+        
 
-        var text = this.add.text(250, 150/*this.cameras.main.centerY*/, content, textStyle);
+        var text = this.add.text(150, 70/*this.cameras.main.centerY*/, content, textStyle);
         text.setOrigin(.103);
 
         this.add.text(50, 550 , "Enter your answers here:", textStyle);
@@ -52,6 +55,26 @@ export default class PuzzleOne extends Phaser.Scene {
         this.add.existing(inputText);
         inputText.on('textchange', function(inputText, e){ window.puzzOneVarThree = inputText.text;
         }, this);
+
+
+        // function addTooltipToButton(button, tooltipText: string) {
+        //   button.addEventListener('mouseover', () => {
+        //     showTooltip(button, tooltipText);
+        //   });
+        
+        //   button.addEventListener('mouseout', () => {
+        //     hideTooltip(button);
+        //   });
+        // }
+        
+        // function showTooltip(element: Button, tooltipText: string) {
+        //   element.title = tooltipText;
+        // }
+        
+        // function hideTooltip(element: HTMLElement) {
+        //   element.title = '';
+        // }
+        
     }
      
 }
