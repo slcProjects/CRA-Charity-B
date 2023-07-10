@@ -26,7 +26,7 @@ export default class Instructions extends Phaser.Scene {
         image.setScale(this.cameras.main.width / image.width, this.cameras.main.height / image.height);
 
         const content = [
-                    'You have to follow the presentation. You will have access to other',
+                    'You have to follow the map. You will have access to other',
                     'documents that are password protected. You must solve the puzzles to find',
                     'the passwords. Once you think you have a password you can try it out on the',
                     'protected documents. The game can be completed in about 30 minutes.',

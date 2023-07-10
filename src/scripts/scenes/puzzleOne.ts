@@ -2,6 +2,7 @@ import {textStyle} from '../objects/gameStyle';
 import {Button} from '../objects/button';
 import {Label} from '../objects/label';
 import {Input} from '../objects/inputText';
+import { ImgButton } from '../objects/imgButton';
 
 export default class PuzzleOne extends Phaser.Scene {
 
@@ -23,14 +24,14 @@ export default class PuzzleOne extends Phaser.Scene {
         const nextButton = new Button(this,550,330,'Next Puzzle',"PuzzleTwo");
         const hintButton = new Button(this,525,30,'hint',"");
         //addTooltipToButton(hintButton, 'This is a hint');
-        
-  
+        const imageButton = new ImgButton(this, 600, 30, '', 'inventory', 'rocket');
 
         const content = [
           'You find a labyrinth.You must enter from the left and get out on the right.',
           'While you make your way to the exit you must count the colored stones.',
         ];
-
+        
+        
         const picOne = this.add.image(500,350, 'puzzOneImg');
         
 

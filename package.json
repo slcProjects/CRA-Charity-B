@@ -40,7 +40,7 @@
   "license": "MIT",
   "dependencies": {
     "phaser": "^3.55.2",
-    "phaser3-rex-plugins": "^1.60.2"
+    "phaser3-rex-plugins": "^1.60.3"
   },
   "devDependencies": {
     "@yandeu/prettier-config": "^0.0.3",
