@@ -13,6 +13,7 @@ export default class PreloadScene extends Phaser.Scene {
     this.load.image('Map', 'assets/img/map.png')
     this.load.image('alphaChart', 'assets/img/Alphabet.png')
     this.load.image('rocket', 'assets/img/rocket.png')    
+    this.load.image('inventoryBackground', 'assets/img/mars.jpg')
     this.load.image('puzzThreeImgOne', 'assets/img/wordSearch1.png')
     this.load.image('puzzThreeImgTwo', 'assets/img/wordSearch2.png')
 
