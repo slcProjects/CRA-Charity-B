@@ -30,6 +30,8 @@ export default class PuzzleThree extends Phaser.Scene {
           'Use that word as the password to open one of the locked boxes.',
         ];
 
+        this.add.image(500,400, 'puzzThreeImgOne');
+
         var text = this.add.text(250, 180/*this.cameras.main.centerY*/, content, textStyle);
         text.setOrigin(.103);
 
