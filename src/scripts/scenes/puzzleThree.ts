@@ -20,9 +20,9 @@ export default class PuzzleThree extends Phaser.Scene {
         image.setScale(this.cameras.main.width / image.width, this.cameras.main.height / image.height);
        
 
-        const title = new Label(this,100,100,"Puzzle Three : Word Search");
-        const nextButton = new Button(this,550,330,'Next Puzzle',"PuzzleFour");
-        const hintButton = new Button(this,500,30,'hint',"");
+        const title = new Label(this, 100, 50, "Puzzle Three : Word Search");
+        const nextButton = new Button(this, 550, 330, 'Next Puzzle', "PuzzleFour");
+        const hintButton = new Button(this, 530, 30, 'hint', "");
 
         const content = [
           'You find a word search next! Find all the words.', 
@@ -30,11 +30,14 @@ export default class PuzzleThree extends Phaser.Scene {
           'Use that word as the password to open one of the locked boxes.',
         ];
 
-        var text = this.add.text(250, 180/*this.cameras.main.centerY*/, content, textStyle);
+        var text = this.add.text(250, 100/*this.cameras.main.centerY*/, content, textStyle);
         text.setOrigin(.103);
 
-        this.add.text(50, 560 , "Enter your password here:", textStyle);
-        var inputText = new Input(this, 450, 570, 150, 50);
+        this.add.image(490, 400, 'puzzThreeImgOne')
+        this.add.image(920, 410, 'puzzThreeImgTwo')
+
+        this.add.text(320, 630 , "Enter your password here:", textStyle);
+        var inputText = new Input(this, 710, 640, 150, 50);
         this.add.existing(inputText);
         inputText.on('textchange', function(inputText, e){ window.puzzOneVarOne = inputText.text;
         }, this);
