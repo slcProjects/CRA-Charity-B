@@ -1,3 +1,6 @@
 /.cache
 /dist
 /node_modules
+.vs/slnx.sqlite
+.vs/VSWorkspaceState.json
+.vs/CRA-Charity-B/v16/.suo
