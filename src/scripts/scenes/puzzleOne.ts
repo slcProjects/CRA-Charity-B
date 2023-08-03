@@ -3,6 +3,8 @@ import {Button} from '../objects/button';
 import {Label} from '../objects/label';
 import {Input} from '../objects/inputText';
 import { ImgButton } from '../objects/imgButton';
+import { tooltip } from '../objects/tooltip';
+
 
 export default class PuzzleOne extends Phaser.Scene {
 
@@ -22,9 +24,9 @@ export default class PuzzleOne extends Phaser.Scene {
        
         const title = new Label(this,70,30,"Puzzle One : Labyrinth");
         const nextButton = new Button(this,550,330,'Next Puzzle',"PuzzleTwo");
-        const hintButton = new Button(this,525,30,'hint',"");
+        const hintButton = new tooltip(this,1000,30,'Hint!','','Look here');
         //addTooltipToButton(hintButton, 'This is a hint');
-        const imageButton = new ImgButton(this, 600, 30, '', 'inventory', 'rocket');
+        const imageButton = new ImgButton(this, 600, 30, '', 'Inventory', 'rocket');
 
         const content = [
           'You find a labyrinth.You must enter from the left and get out on the right.',
