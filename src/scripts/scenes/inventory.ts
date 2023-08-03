@@ -22,7 +22,13 @@ export default class Inventory extends Phaser.Scene {
     imgchange.setPosition(this.cameras.main.centerX, this.cameras.main.centerY);
     imgchange.setScale(this.cameras.main.width / imgchange.width, this.cameras.main.height / imgchange.height);
 
-    const imageButton = new ImgButton(this,55,195, '', 'PuzzleOne', 'volcano');
+    const volcanoButton = new ImgButton(this,330,195, '', 'PuzzleOne', 'volcano');
+    const duneButton = new ImgButton(this,490,165, '', 'PuzzleTwo', 'sandDune');
+    const mountainButton = new ImgButton(this,125,165, '', 'PuzzleThree', 'mountains');
+    const rockButton = new ImgButton(this,570,240, '', 'PuzzleFour', 'rocks');
+    const craterButton = new ImgButton(this,400,320, '', '', 'crater');
+    
+    
 
     //this.add.text(50, 550 , "Enter your answers here:", textStyle);
 

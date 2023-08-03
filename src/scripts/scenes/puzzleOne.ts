@@ -60,23 +60,7 @@ export default class PuzzleOne extends Phaser.Scene {
         }, this);
 
 
-        // function addTooltipToButton(button, tooltipText: string) {
-        //   button.addEventListener('mouseover', () => {
-        //     showTooltip(button, tooltipText);
-        //   });
-        
-        //   button.addEventListener('mouseout', () => {
-        //     hideTooltip(button);
-        //   });
-        // }
-        
-        // function showTooltip(element: Button, tooltipText: string) {
-        //   element.title = tooltipText;
-        // }
-        
-        // function hideTooltip(element: HTMLElement) {
-        //   element.title = '';
-        // }
+      
         
     }
      
