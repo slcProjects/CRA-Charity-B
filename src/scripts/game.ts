@@ -7,6 +7,8 @@ import PuzzleOne from './scenes/puzzleOne'
 import PuzzleTwo from './scenes/puzzleTwo'
 import PuzzleThree from './scenes/puzzleThree'
 import PuzzleFour from './scenes/puzzleFour'
+import PuzzleFive from './scenes/puzzleFive' 
+import PuzzleSix from './scenes/puzzleSix' 
 import Inventory from './scenes/inventory'
 
 
@@ -33,7 +35,7 @@ const config = {
   dom: {
     createContainer: true
 },
-  scene: [PreloadScene, MainScene,Instructions,Story,PuzzleOne,PuzzleTwo,PuzzleThree,PuzzleFour,Inventory],
+  scene: [PreloadScene, MainScene,Instructions,Story,PuzzleOne,PuzzleTwo,PuzzleThree,PuzzleFour,PuzzleFive,PuzzleSix,Inventory],
   userName: "guest",
   physics: {
     default: 'arcade',
