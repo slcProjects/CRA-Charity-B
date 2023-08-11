@@ -2,6 +2,8 @@ import {textStyle} from '../objects/gameStyle';
 import {Button} from '../objects/button';
 import {Label} from '../objects/label';
 import {Input} from '../objects/inputText';
+import { ImgButton } from '../objects/imgButton';
+import { tooltip } from '../objects/tooltip';
 
 export default class PuzzleThree extends Phaser.Scene {
 
@@ -22,7 +24,9 @@ export default class PuzzleThree extends Phaser.Scene {
 
         const title = new Label(this, 100, 50, "Puzzle Three : Word Search");
         const nextButton = new Button(this, 550, 330, 'Next Puzzle', "PuzzleFour");
-        const hintButton = new Button(this, 530, 30, 'hint', "");
+        const hintButton = new tooltip(this, 1000, 30, 'Hint!','', 'You can solve the puzzle \neven if you are not' + 
+        '\ncompletely done! You just \nneed the 7-letter word.');
+        const imageButton = new ImgButton(this, 600, 30, '', 'Inventory', 'rocket');
 
         const content = [
           'You find a word search next! Find all the words.', 
