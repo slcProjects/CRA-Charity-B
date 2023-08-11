@@ -7,9 +7,11 @@ import { ImgButton } from '../objects/imgButton';
 
 
 export default class Inventory extends Phaser.Scene {
+  icon: any;
 
     constructor() {
       super({ key: 'Inventory' })
+
 
      
     }
@@ -27,10 +29,9 @@ export default class Inventory extends Phaser.Scene {
     const mountainButton = new ImgButton(this,125,165, '', 'PuzzleThree', 'mountains');
     const rockButton = new ImgButton(this,570,240, '', 'PuzzleFour', 'rocks');
     const craterButton = new ImgButton(this,400,320, '', '', 'crater');
+    const icon = new ImgButton(this,50,150, '', '', 'icon');  
     
     
+}
 
-    //this.add.text(50, 550 , "Enter your answers here:", textStyle);
-
-    }
 }
