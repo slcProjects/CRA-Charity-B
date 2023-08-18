@@ -16,14 +16,21 @@ export default class PuzzleThree extends Phaser.Scene {
     create()
     {
        
-      const image = this.add.image(0, 0, 'background');
+        const image = this.add.image(0, 0, 'background');
         image.setOrigin(0.5);
         image.setPosition(this.cameras.main.centerX, this.cameras.main.centerY);
         image.setScale(this.cameras.main.width / image.width, this.cameras.main.height / image.height);
        
 
         const title = new Label(this, 100, 50, "Puzzle Three : Word Search");
-        const nextButton = new Button(this, 550, 330, 'Next Puzzle', "PuzzleFour");
+        const nextButton = new Button(this, 550, 330, 'Next Puzzle', "PuzzleFour").setInteractive().on('pointerdown', () => {
+          if (inputText.text === window.puzzThree){
+            nextButton.setActive
+          }
+          else if (inputText.text !== window.puzzThree){
+            nextButton.disableInteractive()
+          }
+        }, this);
         const hintButton = new tooltip(this, 1000, 30, 'Hint!','', 'You can solve the puzzle \neven if you are not' + 
         '\ncompletely done! You just \nneed the 7-letter word.');
         const imageButton = new ImgButton(this, 600, 30, '', 'Inventory', 'rocket');
@@ -43,11 +50,31 @@ export default class PuzzleThree extends Phaser.Scene {
         this.add.text(320, 630 , "Enter your password here:", textStyle);
         var inputText = new Input(this, 710, 640, 150, 50);
         this.add.existing(inputText);
-        inputText.on('textchange', function(inputText, e){ window.puzzOneVarOne = inputText.text;
-        }, this);
+        //nextButton.setInteractive(); 
+        /*nextButton.on('pointerover', () => {
+          if (inputText.text === window.puzzThree){
+            nextButton.setActive
+          }
+          else if (inputText.text !== window.puzzThree){
+            nextButton.disableInteractive()
+          }
+        }, this);*/
   
 
           
     }
      
+    /*checkInput(inputText)
+    {
+        let answer: string = 'cluster';
+        let isCorrect: boolean = inputText.value === answer;
+        if(isCorrect)
+        {
+          
+        }
+
+
+
+    }*/
+
 }

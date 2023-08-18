@@ -49,19 +49,22 @@ const config = {
 
 window.addEventListener('load', () => {
   window.userName = "guest";
-  window.puzzOneVarOne = 0;
-  window.puzzOneVarTwo = 0;
-  window.puzzOneVarThree = 0;
+  window.puzzOneVarOne = 5;
+  window.puzzOneVarTwo = 3;
+  window.puzzOneVarThree = 4;
+  window.puzzThree = "habitat"; 
 
   const game = new Phaser.Game(config)
 
 })
 declare global {
   interface Window {
-    userName: string ;
+    userName: string;
     puzzOneVarOne: integer;
     puzzOneVarTwo: integer;
     puzzOneVarThree: integer;
+    puzzThree: string;
+    puzzFour: integer; 
     hintButton: ConstantSourceNode;
   }
 }
