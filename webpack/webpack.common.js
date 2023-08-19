@@ -28,7 +28,7 @@ module.exports = {
     }
   },
   plugins: [
-    new HtmlWebpackPlugin({ gameName: 'My Phaser Game', template: 'src/index.html' }),
+    new HtmlWebpackPlugin({ gameName: 'Mars Escape Room', template: 'src/index.html' }),
     new CopyWebpackPlugin({
       patterns: [
         { from: 'src/assets', to: 'assets' },

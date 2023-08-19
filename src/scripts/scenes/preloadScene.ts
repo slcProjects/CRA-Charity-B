@@ -22,6 +22,27 @@ export default class PreloadScene extends Phaser.Scene {
     this.load.image('puzzThreeImgOne', 'assets/img/wordSearch1.png')
     this.load.image('puzzThreeImgTwo', 'assets/img/wordSearch2.png')
     this.load.image('puzzleFourRiddle', 'assets/img/figurineRiddle.png')
+
+    this.load.image('martianOne', 'assets/img/martianOne.PNG')
+    this.load.image('martianTwo', 'assets/img/martianTwo.PNG')
+    this.load.image('martianThree', 'assets/img/martianThree.PNG')
+    this.load.image('martianFour', 'assets/img/martianFour.PNG')
+
+
+    this.load.image('messageOne', 'assets/img/messageOne.PNG')
+    this.load.image('messageTwo', 'assets/img/messageTwo.PNG')
+    this.load.image('messageThree', 'assets/img/messageThree.PNG')
+    this.load.image('messageFour', 'assets/img/messageFour.PNG')
+    this.load.image('mapLg', 'assets/img/mapLg.PNG')
+    this.load.image('rocksImg', 'assets/img/rocksImg.PNG')
+
+
+
+
+
+    this.load.image('framesImgs', 'assets/img/framesImgs.PNG')
+
+
    
 
   }
