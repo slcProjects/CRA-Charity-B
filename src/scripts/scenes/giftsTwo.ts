@@ -33,14 +33,14 @@ export default class GiftsTwo extends Phaser.Scene {
                 
         ];
        
-        this.alpha = this.add.image(500,400, 'alphaChart');
-        this.alpha.setScale(1);
+        this.alpha = this.add.image(550,375, 'alphaChart');
+        this.alpha.setScale(0.8);
 
         const title = new Label(this,/*this.cameras.main.centerX*/ 250,50,"Another Gift from the martians");
         var text = this.add.text(250, 115/*this.cameras.main.centerY*/, content, textStyle);
         text.setOrigin(.103);
 
-        this.add.text(150, 650 , "Once you click Start Game, your timer will begin", textStyle);
+        this.add.text(150, 575 , "Once you click Start Game, your timer will begin", textStyle);
 
       
         const nextButton = new Button(this,450,330,'Start Game',"PuzzleOne");

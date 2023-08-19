@@ -17,9 +17,11 @@ export default class PuzzleOne extends Phaser.Scene {
     create()
     {
 
-      window.currentTime = new Date();
-      if(window.startTime != 0)
+      if(window.startTime == 0)
+      {
+        window.currentTime = new Date();
         window.startTime = window.currentTime.getTime();
+      }
 
 
       const image = this.add.image(0, 0, 'background');

@@ -41,9 +41,9 @@ export default class Instructions extends Phaser.Scene {
         var text = this.add.text(250, 150/*this.cameras.main.centerY*/, content, textStyle);
         text.setOrigin(.103);
 
-        this.add.text(150, 350 , "please enter your name", textStyle);
+        this.add.text(150, 350 , "please enter your name:", textStyle);
 
-        var inputText = new Input(this, 500, 370, 300, 50);
+        var inputText = new Input(this, 600, 370, 300, 50);
         this.add.existing(inputText);
         const nextButton = new Button(this,450,335,'Next',"Gifts");//story gone
 
