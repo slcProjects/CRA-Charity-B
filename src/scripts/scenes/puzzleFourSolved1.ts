@@ -16,6 +16,9 @@ export default class PuzzleFourSolved1 extends Phaser.Scene {
     
     create()
     {
+      let popupVisible = false;
+      let popupContainer; 
+
 
       const image = this.add.image(0, 0, 'background');
         image.setOrigin(0.5);
@@ -23,14 +26,20 @@ export default class PuzzleFourSolved1 extends Phaser.Scene {
         image.setScale(this.cameras.main.width / image.width, this.cameras.main.height / image.height);
        
         const title = new Label(this,70,30,"You've solved another puzzle!");
+        //const imageButton = new ImgButton(this, 600, 30, '', 'GiftsTwo', 'rocket');
+        const rocketHelp = this.add.image(1100,60,'rocket');
+        rocketHelp.setInteractive();
+
+
+
         const nextButton = new Button(this,550,340,'Next Puzzle',"PuzzleFive");
 
         const previousButton = new Button(this,100,340,'Go Back',"PuzzleThree");
 
   
         const content = [
-          'Martian Message to decode:',
-          'You have found a message. Each message contains the name of a location where the precious stone is not.',
+          'You have found another message.Each message contains',
+          'the name of a location where the precious stone is not.',
           'Once you have decoded all the messages, you will only have one',
           'location on the map where the stone is located.'
 
@@ -39,12 +48,42 @@ export default class PuzzleFourSolved1 extends Phaser.Scene {
      
         
         
-        const martianOne = this.add.image(700,400, 'messageFour');
+        const martianOne = this.add.image(330,270, 'messageFour');
 
         
 
         var text = this.add.text(150, 70/*this.cameras.main.centerY*/, content, textStyle);
         text.setOrigin(.103);
+
+
+
+        rocketHelp.on('pointerdown', () => {
+          if (popupVisible) {
+              hidePopup.call(this);
+          } else {
+              showPopup.call(this, 'alphaChart');
+          }
+      });
+
+         // Function to create the pop-up
+    const showPopup = (imageKey) => {
+     popupContainer  = this.add.container(900, 400); // Position it in the center of the screen
+
+      const popupBackground = this.add.rectangle(0, 0, 400, 300, 0x000000, 0.7); // Background
+      const popupImage = this.add.image(0, 0, imageKey).setScale(0.5); // Image to display
+
+      popupContainer .add([popupBackground, popupImage]);
+      popupVisible = true;
+
+    
+  }
+  function hidePopup() {
+    if (popupContainer) {
+        popupContainer.destroy();
+        popupVisible = false;
+    }
+}
+
       }
       
       
