@@ -26,33 +26,31 @@ export default class Instructions extends Phaser.Scene {
         image.setScale(this.cameras.main.width / image.width, this.cameras.main.height / image.height);
 
         const content = [
-                    'You have to follow the map. You will have access to other',
-                    'documents that are password protected. You must solve the puzzles to find',
-                    'the passwords. Once you think you have a password you can try it out on the',
-                    'protected documents. The game can be completed in about 30 minutes.',
-                    'These are a few objects to help you on your quest.',
-                    'You start your research…. You will find some puzzles with locks. When',
-                    'you decode a combination of numbers, you can try that number on one of',
-                    'the password protected puzzles. Good luck!'
+
+          'You have met some Martians. The Martians need your help to recover a',
+          'magical precious stone. This stone is essential to their culture and it is',
+          'imperative that you find the stone as soon as possible. The stone has magical',
+          'powers and allows Martians to maintain the peace on their planet. Without it,',
+          'the different clans might go to war.'
+                
         ];
        
-        this.map = this.add.image(350,490, 'Map');
-        this.map.setScale(0.8,0.6);
-
-        this.alpha = this.add.image(950,490, 'alphaChart');
-        this.alpha.setScale(0.5,0.5);
+  
 
         const title = new Label(this,/*this.cameras.main.centerX*/ 250,50,"Instructions");
         var text = this.add.text(250, 150/*this.cameras.main.centerY*/, content, textStyle);
         text.setOrigin(.103);
 
-        this.add.text(150, 650 , "please enter your name", textStyle);
+        this.add.text(150, 350 , "please enter your name:", textStyle);
 
-        var inputText = new Input(this, 500, 670, 150, 50);
+        var inputText = new Input(this, 600, 370, 300, 50);
         this.add.existing(inputText);
-        const nextButton = new Button(this,450,335,'Start',"Story");
+        const nextButton = new Button(this,450,335,'Next',"Gifts");//story gone
 
-        inputText.on('textchange', function(inputText, e){ window.userName = inputText.text;
+        inputText.on('textchange', function(inputText, e){ 
+          
+          window.userName = inputText.text;
+        
         }, this);
 
     }
